@@ -242,7 +242,7 @@ const StaffRow = ({index, staff, groups, updateStaff, saveStaff, deleteStaff, se
         <TableRow key={index}>
             <BorderLessTableCell>
                 <FormControl variant="outlined" fullWidth>
-                    <InputLabel id="demo-simple-select-outlined-label">Role Type</InputLabel>
+                    <InputLabel id="demo-simple-select-outlined-label" required>Role Type</InputLabel>
                     <Select
                         labelId="demo-simple-select-outlined-label"
                         id="demo-simple-select-outlined"
@@ -265,16 +265,16 @@ const StaffRow = ({index, staff, groups, updateStaff, saveStaff, deleteStaff, se
             </BorderLessTableCell>
             <BorderLessTableCell>
                 <TextField value={staff.name} onChange={(evt) => onValueChange(evt, "name")} label="Name"
-                           variant="outlined"/>
+                           variant="outlined" required/>
             </BorderLessTableCell>
             <BorderLessTableCell>
                 <TextField disabled={staff.type === OLD_USER} value={staff.mobileNumber}
                            onChange={(evt) => onValueChange(evt, "mobileNumber")} type="tel"
-                           label="Mobile Number" variant="outlined"/>
+                           label="Mobile Number" variant="outlined" required/>
             </BorderLessTableCell>
             <BorderLessTableCell>
                 <TextField value={staff.employeeId} onChange={(evt) => onValueChange(evt, "employeeId")}
-                           label="Employee ID" variant="outlined"/>
+                           label="Employee ID" variant="outlined" required/>
             </BorderLessTableCell>
             <BorderLessTableCell>
                 <FormControl component="fieldset">
